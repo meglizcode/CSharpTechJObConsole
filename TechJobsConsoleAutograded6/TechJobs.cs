@@ -135,11 +135,22 @@ namespace TechJobsConsoleAutograded6
         // TODO: complete the PrintJobs method.
         public void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
+
+            string asterisksDivider = "*****";
+
+
             if (someJobs.Count == 0) {
                 Console.WriteLine("No Results");
             }
-            
-            Console.WriteLine("PrintJobs is not implemented yet");
+            else {
+                for (int i = 0; i <someJobs.Count; i++) {
+                    Console.WriteLine(Environment.NewLine + asterisksDivider);
+                    foreach (KeyValuePair<string, string> item in someJobs[i]) {
+                        Console.WriteLine(item.Key + ":" + item.Value);
+                    }
+                    Console.WriteLine(asterisksDivider);
+                }
+            }
         }
     }
 }
