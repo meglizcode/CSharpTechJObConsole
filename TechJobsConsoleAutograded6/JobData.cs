@@ -49,17 +49,19 @@ namespace TechJobsConsoleAutograded6
             LoadData();
             //Task 2 list data in colomns 
             List<Dictionary<string,string>> jobMatch = new List<Dictionary<string, string>>();
-            foreach (Dictionary<string,string> job in AllJobs) {
-                foreach (KeyValuePair<string, string> kvp in job) {
+
+            foreach (Dictionary<string,string> jobDetails in AllJobs) {
+
+                foreach (KeyValuePair<string, string> kvp in jobDetails) {
                   
-                    if (kvp.Value.ToUpper().Contains(value.ToUpper()) && !jobMatch.Contains(job)) {
+                    if (kvp.Value.ToUpper().Contains(value.ToUpper()) && !jobMatch.Contains(jobDetails)) {
                         
-                        jobMatch.Add(job);
+                        jobMatch.Add(jobDetails);
                     }
                 }
             }
 
-            return null;
+            return jobMatch;
         }
 
         /**
