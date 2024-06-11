@@ -145,9 +145,11 @@ namespace TechJobsConsoleAutograded6
             else {
                 for (int i = 0; i <someJobs.Count; i++) {
                     Console.WriteLine(Environment.NewLine + asterisksDivider);
+
                     foreach (KeyValuePair<string, string> item in someJobs[i]) {
                         Console.WriteLine(item.Key + ":" + item.Value);
                     }
+                    
                     Console.WriteLine(asterisksDivider);
                 }
             }
